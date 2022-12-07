@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Program</title>
+	<h3 align="center">My Bakery</h3>
+</head>
+<body>
+	<br>
+	<img src ="brownies.jpg" alt="Brownies" width="200" height="200"/>
+	<p>Brownies</p>
+	<p>Price: 30</p>
+	Quantity<input type="text" id="qty1"/><br><br>
+	<br>
+	<img src ="tiramisu.jpg" alt="tiramisu" width="200" height="200"/>
+	<p>Tiramisu</p>
+	<p>Price: 50</p>
+	Quantity<input type="text" id="qty2"/><br><br>
+	<br>
+	<img src ="cookies.jpg" alt="cookies" width="200" height="200"/>
+	<p>Cookies</p>
+	<p>Price: 20</p>
+	Quantity<input type="text" id="qty3"/><br><br>
+	<input type="button" onclick="calculate()" value="Total"/>
+	<p>Total price is:<span id="result"></span></p>
+
+	<script>
+		function calculate()
+		{
+			x=30*document.getElementById("qty1").value;
+			y=50*document.getElementById("qty2").value;
+			z=20*document.getElementById("qty3").value;
+			res= x+y+z;
+			document.getElementById("result").innerHTML=res;
+		}
+	</script>
